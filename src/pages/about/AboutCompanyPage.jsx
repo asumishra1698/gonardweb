@@ -19,9 +19,9 @@ const companyBannerSlides = [
 
 const companyHighlights = [
   {
-    title: 'Established in 2021',
+    title: 'Established in 2015',
     description:
-      'GonardWeb was established in 2021 with a focus on helping businesses build stronger digital foundations through design, development, and growth-oriented execution.',
+      'GonardWeb was established in 2015 with a focus on helping businesses build stronger digital foundations through design, development, and growth-oriented execution.',
   },
   {
     title: 'Business-focused delivery',
@@ -70,11 +70,11 @@ function AboutCompanyPage() {
               Company overview
             </div>
             <h2 className="mt-5  text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
-              GonardWeb is a digital company established in 2021 to help businesses build clear, modern, and growth-ready digital systems.
+              GonardWeb is a digital company established in 2015 to help businesses build clear, modern, and growth-ready digital systems.
             </h2>
             <div className="mt-5 space-y-5  text-base leading-8 text-slate-600 sm:text-lg">
               <p>
-                Since 2021, we have focused on creating websites, digital platforms, mobile app experiences, and marketing support systems that are easier for businesses to use and easier for customers to understand.
+                Since 2015, we have focused on creating websites, digital platforms, mobile app experiences, and marketing support systems that are easier for businesses to use and easier for customers to understand.
               </p>
               <p>
                 Our company approach is practical. We look at what the business needs to communicate, how users are expected to move through the experience, and what kind of digital setup will support long-term improvement instead of short-term patchwork.

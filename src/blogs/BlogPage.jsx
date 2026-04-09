@@ -10,7 +10,7 @@ function BlogPage() {
       description="Browse articles on websites, SEO, paid marketing, design, and growth strategy in a clean grid layout."
       bannerTitle="Publish articles, updates, and practical insights with a stronger editorial presence."
       bannerDescription="Use the blog to turn expertise into trust through educational posts, project thinking, and actionable guidance."
-      primaryAction={{ label: 'Contact Us', to: '/contact-us' }}
+      primaryAction={{ label: 'Book A Free Consultation', to: '/contact-us' }}
     >
       <div className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="max-w-full">         
@@ -19,7 +19,7 @@ function BlogPage() {
             {blogPosts.map((post) => (
               <article
                 key={post.slug}
-                className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.1)]"
+                className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_5px_10px_rgba(15,23,42,0.1)]"
               >
                 <div className={`h-52 bg-gradient-to-br ${post.accent} p-6 text-white`}>
                   <div className="flex items-start justify-between gap-3">
@@ -30,9 +30,9 @@ function BlogPage() {
                       {post.readTime}
                     </span>
                   </div>
-                  <div className="mt-12 max-w-xs">
+                  <div className="mt-5 max-w-xs">
                     <p className="text-sm text-white/80">{post.date}</p>
-                    <h2 className="mt-3 text-2xl font-semibold leading-tight tracking-tight">{post.title}</h2>
+                    <h2 className="text-xl font-bold leading-tight tracking-tight">{post.title}</h2>
                   </div>
                 </div>
 

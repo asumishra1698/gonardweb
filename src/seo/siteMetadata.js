@@ -335,14 +335,14 @@ const routeMetadata = {
     keywords:
       'website design FAQs, digital marketing FAQs, client support FAQs, work process FAQs, GonardWeb frequently asked questions',
   },
-  '/terms': {
+  '/terms-and-conditions': {
     title: 'Terms and Conditions | GonardWeb',
     description:
       'Read the GonardWeb terms and conditions governing website usage, project engagements, payments, and service limitations.',
     type: 'WebPage',
     name: 'Terms and Conditions',
   },
-  '/privacy': {
+  '/privacy-policy': {
     title: 'Privacy Policy | Elbroz Media Pvt Ltd',
     description:
       'Review how Elbroz Media Pvt Ltd collects, uses, stores, and protects personal data across www.elbroz.com and related services.',

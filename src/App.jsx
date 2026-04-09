@@ -112,11 +112,11 @@ function App() {
           element={<FaqPage />}
         />
         <Route
-          path="terms"
+          path="terms-and-conditions"
           element={<TermsConditionsPage />}
         />
         <Route
-          path="privacy"
+          path="privacy-policy"
           element={<PrivacyPolicyPage />}
         />
          <Route

@@ -8,8 +8,8 @@ const footerGroups = [
       { label: 'About Us', to: '/about-us' },
       { label: 'Contact Us', to: '/contact-us' },
       { label: 'FAQs', to: '/faqs' },
-      { label: 'Terms of Service', to: '/terms' },
-      { label: 'Privacy Policy', to: '/privacy' },
+      { label: 'Terms of Service', to: '/terms-and-conditions' },
+      { label: 'Privacy Policy', to: '/privacy-policy' },
     ],
   },
   {
@@ -23,13 +23,13 @@ const footerGroups = [
     ],
   },
   {
-    title: 'Resources',
+    title: 'Solutions',
     links: [
-      { label: 'Events', to: '/events' },
-      { label: 'Community', to: '/community' },
-      { label: 'Social Media', to: '/social-media' },
-      { label: 'Newsletter', to: '/newsletter' },
-      { label: 'Subscribe', to: '/subscribe' },
+      { label: 'Website Design', to: '/solutions/website-design' },
+      { label: 'Website Development', to: '/solutions/website-development' },
+      { label: 'App Development', to: '/solutions/app-development' },
+      { label: 'Digital Marketing', to: '/solutions/digital-marketing' },
+      { label: 'Pricing', to: '/pricing' },
     ],
   },
 ]
@@ -156,13 +156,13 @@ function SiteFooter({ brand = 'GonardWeb', className = '' }) {
                 © {new Date().getFullYear()} {brand}. All rights reserved.
               </p>
               <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3  text-[1.05rem] text-slate-600">
-                <Link className="transition-colors hover:text-[#2447A8]" to="/privacy">
+                <Link className="transition-colors hover:text-[#2447A8]" to="/privacy-policy">
                   Privacy Policy
                 </Link>
-                <Link className="transition-colors hover:text-[#2447A8]" to="/terms">
+                <Link className="transition-colors hover:text-[#2447A8]" to="/terms-and-conditions">
                   Terms of Service
                 </Link>
-                <Link className="transition-colors hover:text-[#2447A8]" to="/privacy">
+                <Link className="transition-colors hover:text-[#2447A8]" to="/privacy-policy">
                   Cookie Policy
                 </Link>
               </div>

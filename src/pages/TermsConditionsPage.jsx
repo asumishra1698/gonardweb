@@ -124,7 +124,7 @@ function TermsConditionsPage() {
             bannerDescription="This page sets expectations for using the website, engaging GonardWeb for services, handling approvals, payments, project scope, liability, and ownership."
             focusTitle="Effective Date: 07 Apr 2026"
             focusDescription="Read these terms before using the website or starting a project with GonardWeb."
-            primaryAction={{ label: 'Privacy Policy', to: '/privacy' }}
+            primaryAction={{ label: 'Privacy Policy', to: '/privacy-policy' }}
         >
             <section className="mx-auto max-w-7xl space-y-6 pb-4">
                 {termsSections.map((section) => (

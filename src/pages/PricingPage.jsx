@@ -154,7 +154,7 @@ export default function PricingPage() {
         >
             <div className="relative overflow-hidden px-4 py-4  sm:px-6 lg:px-8 lg:py-10">
                 <div className="mx-auto max-w-7xl">
-                    <section className="mb-10 grid gap-4 rounded-[2rem] border border-slate-200/70 bg-white/80 p-6  backdrop-blur sm:grid-cols-3 sm:p-8">
+                    {/* <section className="mb-10 grid gap-4 rounded-[2rem] border border-slate-200/70 bg-white/80 p-6  backdrop-blur sm:grid-cols-3 sm:p-8">
                         <div>
                             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Turnaround</p>
                             <p className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">Fast kickoff</p>
@@ -170,7 +170,7 @@ export default function PricingPage() {
                             <p className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">Let us tailor it</p>
                             <p className="mt-2 text-sm leading-6 text-slate-600">If your requirements are beyond a standard package, we can shape a custom proposal.</p>
                         </div>
-                    </section>
+                    </section> */}
 
                     <div className="space-y-10">
                         <PricingSection
