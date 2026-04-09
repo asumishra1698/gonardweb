@@ -319,7 +319,7 @@ const routeMetadata = {
     type: 'WebPage',
     name: 'Pricing',
   },
-  '/news': {
+  '/latest-news': {
     title: 'Latest News | GonardWeb',
     description:
       'Follow GonardWeb updates, announcements, and latest news around digital products, launches, and company activity.',

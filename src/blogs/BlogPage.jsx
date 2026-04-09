@@ -13,24 +13,7 @@ function BlogPage() {
       primaryAction={{ label: 'Contact Us', to: '/contact-us' }}
     >
       <div className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="max-w-full">
-          <section className="mb-10 grid gap-4 rounded-[2rem] border border-slate-200/70 bg-white/80 p-6 shadow-[0_18px_60px_rgba(15,23,42,0.06)] backdrop-blur sm:grid-cols-3 sm:p-8">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Topics</p>
-              <p className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">Web, SEO, marketing</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">Content for businesses improving visibility, conversion, and brand clarity.</p>
-            </div>
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Format</p>
-              <p className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">Readable grid view</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">A clean blog layout designed for scanning categories, summaries, and publication context.</p>
-            </div>
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Purpose</p>
-              <p className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">Earn trust faster</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">Use content to answer buying questions before a visitor reaches out.</p>
-            </div>
-          </section>
+        <div className="max-w-full">         
 
           <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {blogPosts.map((post) => (

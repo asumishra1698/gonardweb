@@ -38,7 +38,7 @@ const navigationItems = [
     ],
   },
   { label: 'Pricing', to: '/pricing' },
-  { label: 'Latest News', to: '/news' },
+  { label: 'Latest News', to: '/latest-news' },
   { label: 'Contact Us', to: '/contact-us' },
 ]
 

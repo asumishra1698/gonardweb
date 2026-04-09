@@ -105,20 +105,8 @@ function App() {
           <Route path="work/case-studies" element={<CaseStudiesPage />} />
           <Route path="work/client" element={<ClientPage />} />
           <Route path="work/client-testimonials" element={<ClientTestimonialsPage />} />
-          <Route path="pricing" element={<PricingPage />} />
-        <Route
-          path="news"
-          element={
-            <PageBannerLayout
-              eyebrow="Latest News"
-              title="Publish insights, updates, and editorial content."
-              description="Replace this page with a blog index or content hub when those posts exist."
-              bannerTitle="Highlight updates, launches, and company news with stronger editorial presence."
-              bannerDescription="Use the banner to frame this page as a news surface for announcements, launches, and recent activity."
-              primaryAction={{ label: 'Blog', to: '/blog' }}
-            />
-          }
-        />
+          <Route path="pricing" element={<PricingPage />} />       
+       
         <Route
           path="faqs"
           element={<FaqPage />}
@@ -131,7 +119,7 @@ function App() {
           path="privacy"
           element={<PrivacyPolicyPage />}
         />
-        <Route
+         <Route
           path="blog"
           element={<BlogPage />}
         />
@@ -141,6 +129,18 @@ function App() {
           element={
             <PageBannerLayout
               eyebrow="Press"
+              title="Centralize media mentions, coverage, and brand materials."
+              description="Use this route for press resources, media kits, and news coverage."
+              bannerTitle="Create a clearer press surface for media, coverage, and brand assets."
+              bannerDescription="Use the banner to frame the page as a resource for journalists, partners, and external references."
+            />
+          }
+        />
+        <Route
+          path="latest-news"
+          element={
+            <PageBannerLayout
+              eyebrow="Latest news"
               title="Centralize media mentions, coverage, and brand materials."
               description="Use this route for press resources, media kits, and news coverage."
               bannerTitle="Create a clearer press surface for media, coverage, and brand assets."
