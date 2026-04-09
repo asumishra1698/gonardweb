@@ -1,11 +1,13 @@
+import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
-import { blogPosts, getBlogPostBySlug } from './blogindex.jsx'
+import { blogPosts, getBlogPostBySlug, loadBlogPostBySlug } from './blogindex.jsx'
 import { useConsultationPopup } from '../components/ConsultationPopupProvider.jsx'
 
 function BlogPostPage() {
     const { slug } = useParams()
     const { openConsultationPopup } = useConsultationPopup()
-    const post = getBlogPostBySlug(slug)
+    const postSummary = getBlogPostBySlug(slug)
+    const [post, setPost] = useState(postSummary)
     const relatedPosts = blogPosts.filter((entry) => entry.slug !== slug).slice(0, 3)
     const focusTitle = post?.focusTitle || 'SEO Focus'
     const focusPoints = post?.focusPoints || [
@@ -15,7 +17,27 @@ function BlogPostPage() {
         'Readable section hierarchy with semantic headings',
     ]
 
-    if (!post) {
+    useEffect(() => {
+        let isActive = true
+
+        setPost(postSummary)
+
+        if (!slug) {
+            return undefined
+        }
+
+        loadBlogPostBySlug(slug).then((resolvedPost) => {
+            if (isActive && resolvedPost) {
+                setPost(resolvedPost)
+            }
+        })
+
+        return () => {
+            isActive = false
+        }
+    }, [postSummary, slug])
+
+    if (!postSummary) {
         return <Navigate to="/blog" replace />
     }
 
@@ -88,7 +110,7 @@ function BlogPostPage() {
 
                 <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem]">
                     <div className="space-y-8">
-                        {post.sections.map((section) => (
+                        {post.sections?.map((section) => (
                             <section key={section.heading} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
                                 <h2 className="text-2xl font-semibold tracking-tight text-slate-950">{section.heading}</h2>
                                 <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
@@ -110,6 +132,17 @@ function BlogPostPage() {
                                 ) : null}
                             </section>
                         ))}
+
+                        {!post.sections ? (
+                            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
+                                <div className="h-6 w-52 rounded-full bg-slate-200" />
+                                <div className="mt-5 space-y-3">
+                                    <div className="h-4 rounded-full bg-slate-100" />
+                                    <div className="h-4 rounded-full bg-slate-100" />
+                                    <div className="h-4 w-5/6 rounded-full bg-slate-100" />
+                                </div>
+                            </section>
+                        ) : null}
 
                         {post.faq?.length ? (
                             <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">

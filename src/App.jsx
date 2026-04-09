@@ -1,54 +1,64 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { ConsultationPopupProvider } from './components/ConsultationPopupProvider.jsx'
 import PageBannerLayout from './components/PageBannerLayout.jsx'
-import PricingPage from './pages/PricingPage.jsx'
 import PageSeo from './components/PageSeo.jsx'
 import SiteFooter from './components/SiteFooter.jsx'
 import SiteHeader from './components/SiteHeader.jsx'
 import SiteLoader from './components/SiteLoader.jsx'
-import HomePage from './pages/HomePage.jsx'
-import AboutPage from './pages/about/AboutPage.jsx'
-import AboutCompanyPage from './pages/about/AboutCompanyPage.jsx'
-import AboutMissionValuesPage from './pages/about/AboutMissionValuesPage.jsx'
-import AboutWhyChooseUsPage from './pages/about/AboutWhyChooseUsPage.jsx'
-import AboutTeamPage from './pages/about/AboutTeamPage.jsx'
-import ContactPage from './pages/ContactPage.jsx'
-import FaqPage from './pages/FaqPage.jsx'
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx'
-import TermsConditionsPage from './pages/TermsConditionsPage.jsx'
-import BlogPage from './blogs/BlogPage.jsx'
-import BlogPostPage from './blogs/BlogPostPage.jsx'
-import SolutionsPage from './pages/solutions/SolutionsPage.jsx'
-import WebsiteDesignPage from './pages/solutions/WebsiteDesignPage.jsx'
-import WebsiteDevelopmentPage from './pages/solutions/WebsiteDevelopmentPage.jsx'
-import AppDevelopmentPage from './pages/solutions/AppDevelopmentPage.jsx'
-import DigitalMarketingPage from './pages/solutions/DigitalMarketingPage.jsx'
-import WorkPage from './pages/work/WorkPage.jsx'
-import PortfolioPage from './pages/work/PortfolioPage.jsx'
-import CaseStudiesPage from './pages/work/CaseStudiesPage.jsx'
-import ClientPage from './pages/work/ClientPage.jsx'
-import ClientTestimonialsPage from './pages/work/ClientTestimonialsPage.jsx'
-import StackPage from './pages/StackPage.jsx'
-import NotFoundPage from './pages/NotFoundPage.jsx'
+
+const HomePage = lazy(() => import('./pages/HomePage.jsx'))
+const AboutPage = lazy(() => import('./pages/about/AboutPage.jsx'))
+const AboutCompanyPage = lazy(() => import('./pages/about/AboutCompanyPage.jsx'))
+const AboutMissionValuesPage = lazy(() => import('./pages/about/AboutMissionValuesPage.jsx'))
+const AboutWhyChooseUsPage = lazy(() => import('./pages/about/AboutWhyChooseUsPage.jsx'))
+const AboutTeamPage = lazy(() => import('./pages/about/AboutTeamPage.jsx'))
+const ContactPage = lazy(() => import('./pages/ContactPage.jsx'))
+const FaqPage = lazy(() => import('./pages/FaqPage.jsx'))
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage.jsx'))
+const TermsConditionsPage = lazy(() => import('./pages/TermsConditionsPage.jsx'))
+const BlogPage = lazy(() => import('./blogs/BlogPage.jsx'))
+const BlogPostPage = lazy(() => import('./blogs/BlogPostPage.jsx'))
+const SolutionsPage = lazy(() => import('./pages/solutions/SolutionsPage.jsx'))
+const WebsiteDesignPage = lazy(() => import('./pages/solutions/WebsiteDesignPage.jsx'))
+const WebsiteDevelopmentPage = lazy(() => import('./pages/solutions/WebsiteDevelopmentPage.jsx'))
+const AppDevelopmentPage = lazy(() => import('./pages/solutions/AppDevelopmentPage.jsx'))
+const DigitalMarketingPage = lazy(() => import('./pages/solutions/DigitalMarketingPage.jsx'))
+const WorkPage = lazy(() => import('./pages/work/WorkPage.jsx'))
+const PortfolioPage = lazy(() => import('./pages/work/PortfolioPage.jsx'))
+const CaseStudiesPage = lazy(() => import('./pages/work/CaseStudiesPage.jsx'))
+const ClientPage = lazy(() => import('./pages/work/ClientPage.jsx'))
+const ClientTestimonialsPage = lazy(() => import('./pages/work/ClientTestimonialsPage.jsx'))
+const StackPage = lazy(() => import('./pages/StackPage.jsx'))
+const PricingPage = lazy(() => import('./pages/PricingPage.jsx'))
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'))
+
+function RouteFallback() {
+  return <div className="min-h-[40vh]" aria-hidden="true" />
+}
 
 function SiteLayout() {
   const location = useLocation()
   const hasMountedRef = useRef(false)
-  const [isPageLoading, setIsPageLoading] = useState(true)
+  const [isPageLoading, setIsPageLoading] = useState(false)
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+
+    if (!hasMountedRef.current) {
+      hasMountedRef.current = true
+      setIsPageLoading(false)
+      return undefined
+    }
+
     setIsPageLoading(true)
 
     const timeoutId = window.setTimeout(
       () => {
         setIsPageLoading(false)
       },
-      hasMountedRef.current ? 350 : 1100,
+      220,
     )
-
-    hasMountedRef.current = true
 
     return () => {
       window.clearTimeout(timeoutId)
@@ -63,7 +73,9 @@ function SiteLayout() {
 
       <div className="flex min-h-[calc(100vh-9rem)] w-full flex-col px-2 lg:px-8">
         <main className="flex-1">
-          <Outlet />
+          <Suspense fallback={<RouteFallback />}>
+            <Outlet />
+          </Suspense>
         </main>
       </div>
 

@@ -112,8 +112,8 @@ const bannerSlides = [
     focusTitle: 'Storefronts built for speed, trust, and repeat purchases.',
     focusDescription:
       'Use this reusable banner for hero sections, service pages, campaigns, or product launches with a simple slide data array.',
-    backgroundImage:
-      "linear-gradient(125deg, rgba(33, 47, 79, 0.28), rgba(33, 47, 79, 0.18)), url('/banner1.jpg')",
+    backgroundSrc: '/optimized/banner1-1280.webp',
+    backgroundSmallSrc: '/optimized/banner1-480.webp',
   },
   {
     eyebrow: 'Digital products',
@@ -124,8 +124,8 @@ const bannerSlides = [
     focusTitle: 'Reusable layout, navigation-safe CTAs, and slide controls included.',
     focusDescription:
       'Each slide can control its own copy, actions, and visual treatment without changing the component structure.',
-    backgroundImage:
-      "linear-gradient(125deg, rgba(47, 28, 35, 0.26), rgba(20, 32, 59, 0.24)), url('/banner2.jpg')",
+    backgroundSrc: '/optimized/banner2-1280.webp',
+    backgroundSmallSrc: '/optimized/banner2-640.webp',
   },
   {
     eyebrow: 'Growth-ready builds',
@@ -136,8 +136,8 @@ const bannerSlides = [
     focusTitle: 'Designed to be reused across services, campaigns, and landing pages.',
     focusDescription:
       'Drop this banner into any page by passing a different slides array. The component handles autoplay, controls, and transitions.',
-    backgroundImage:
-      "linear-gradient(125deg, rgba(14, 24, 48, 0.4), rgba(42, 20, 25, 0.18)), url('/banner1.jpg')",
+    backgroundSrc: '/optimized/banner1-1280.webp',
+    backgroundSmallSrc: '/optimized/banner1-480.webp',
   },
 ]
 

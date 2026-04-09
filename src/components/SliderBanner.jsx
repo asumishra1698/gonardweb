@@ -33,6 +33,7 @@ function SliderBanner({
   const activeSlide = slides[activeIndex]
   const shouldOpenConsultationPopup =
     activeSlide.primaryAction?.label === 'Book A Free Consultation'
+  const heroImageClassName = 'absolute inset-0 h-full w-full object-cover transition-opacity duration-700'
 
   return (
     <section
@@ -42,11 +43,32 @@ function SliderBanner({
         className,
       ].join(' ')}
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-700"
-        style={{ backgroundImage: activeSlide.backgroundImage }}
-        aria-hidden="true"
-      />
+      {activeSlide.backgroundSrc ? (
+        <picture className="absolute inset-0 block" aria-hidden="true">
+          {activeSlide.backgroundSmallSrc ? (
+            <source
+              srcSet={activeSlide.backgroundSmallSrc}
+              media="(max-width: 640px)"
+              type="image/webp"
+            />
+          ) : null}
+          <img
+            src={activeSlide.backgroundSrc}
+            alt=""
+            className={heroImageClassName}
+            loading={activeIndex === 0 ? 'eager' : 'lazy'}
+            fetchPriority={activeIndex === 0 ? 'high' : 'auto'}
+            decoding="async"
+            sizes="100vw"
+          />
+        </picture>
+      ) : (
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+          style={{ backgroundImage: activeSlide.backgroundImage }}
+          aria-hidden="true"
+        />
+      )}
       <div className="absolute inset-0 bg-slate-950/45" aria-hidden="true" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,_rgba(15,23,42,0.78)_0%,_rgba(15,23,42,0.58)_40%,_rgba(15,23,42,0.18)_100%)]" aria-hidden="true" />
 

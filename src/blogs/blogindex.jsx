@@ -1,1 +1,1 @@
-export { blogPosts, blogPostEntries, getBlogPostBySlug } from './posts/index.jsx'
+export { blogPosts, blogPostEntries, getBlogPostBySlug, loadBlogPostBySlug } from './posts/index.jsx'
