@@ -7,8 +7,8 @@ const websiteDesignAndMarketingForFashionBrandsWeRankAndConvert = {
   updatedAt: '2026-04-10',
   readTime: '9 min read',
   accent: 'from-pink-500 via-rose-400 to-orange-400',
-  image: '/optimized/banner2-1280.webp',
-  imageSmall: '/optimized/banner2-640.webp',
+  image: '/optimized/fashion-brands-need-websites.webp',
+  imageSmall: '/optimized/fashion-brands-need-websites.webp',
   imageAlt:
     'Website design and marketing strategy for fashion brands by GonardWeb, focused on product discovery, SEO, and conversions',
   excerpt:
