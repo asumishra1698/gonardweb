@@ -232,7 +232,7 @@ function SiteHeader({
 
       <aside
         className={[
-          'fixed right-0 top-0 z-50 flex h-screen w-[min(86vw,380px)] flex-col overflow-y-auto bg-[linear-gradient(180deg,_#ffffff_0%,_#f6f9ff_100%)] shadow-[0_24px_80px_rgba(15,23,42,0.22)] transition-transform duration-300 ease-out xl:hidden',
+          'fixed right-0 top-0 z-50 flex h-screen w-[min(100vw,560px)] flex-col overflow-y-auto bg-[linear-gradient(180deg,_#ffffff_0%,_#f6f9ff_100%)] shadow-[0_24px_80px_rgba(15,23,42,0.22)] transition-transform duration-300 ease-out xl:hidden',
           isMenuOpen ? 'translate-x-0' : 'translate-x-full',
         ].join(' ')}
         aria-hidden={!isMenuOpen}
@@ -250,20 +250,6 @@ function SiteHeader({
             >
               <MenuToggleIcon open />
             </button>
-          </div>
-          <div className="mt-5 rounded-[1.75rem] bg-slate-950 px-5 py-4 text-white shadow-[0_20px_50px_rgba(15,23,42,0.22)]">
-            <p className=" text-xs uppercase tracking-[0.3em] text-slate-300">
-              Quick contact
-            </p>
-            <a
-              href="tel:+917827284932"
-              className="mt-3 block  text-2xl font-bold text-white"
-            >
-              (+91) 7827284932
-            </a>
-            <p className="mt-2  text-sm leading-6 text-slate-300">
-              Open the drawer, jump to any page, and reach out without losing the current context.
-            </p>
           </div>
         </div>
 

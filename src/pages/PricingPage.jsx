@@ -103,13 +103,13 @@ function PricingCard({ plan, onRequestProposal }) {
                 <button
                     type="button"
                     onClick={onRequestProposal}
-                    className="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
                 >
                     Request Proposal
                 </button>
                 <Link
                     to="/contact-us"
-                    className="inline-flex items-center justify-center rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
                 >
                     Ask Question
                 </Link>
@@ -120,7 +120,7 @@ function PricingCard({ plan, onRequestProposal }) {
 
 function PricingSection({ eyebrow, title, description, plans, columnsClass, onRequestProposal }) {
     return (
-        <section className="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/55 p-6 shadow-[0_20px_70px_rgba(99,102,241,0.08)] backdrop-blur sm:p-8 lg:p-10">
+        <section className="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/55 p-2 shadow-[0_20px_70px_rgba(99,102,241,0.08)] backdrop-blur sm:p-8 lg:p-10">
             <div className="absolute -right-24 top-0 h-52 w-52 rounded-full bg-indigo-200/30 blur-3xl" aria-hidden="true" />
             <div className="absolute -left-24 bottom-0 h-48 w-48 rounded-full bg-sky-200/30 blur-3xl" aria-hidden="true" />
 
@@ -152,25 +152,8 @@ export default function PricingPage() {
             focusTitle="Clear pricing reduces friction before the first sales call."
             focusDescription="Lead with scope, category, and expected outcomes so visitors can identify the right fit quickly."
         >
-            <div className="relative overflow-hidden px-4 py-4  sm:px-6 lg:px-8 lg:py-10">
-                <div className="mx-auto max-w-7xl">
-                    {/* <section className="mb-10 grid gap-4 rounded-[2rem] border border-slate-200/70 bg-white/80 p-6  backdrop-blur sm:grid-cols-3 sm:p-8">
-                        <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Turnaround</p>
-                            <p className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">Fast kickoff</p>
-                            <p className="mt-2 text-sm leading-6 text-slate-600">Clear scope, structured delivery, and direct communication from day one.</p>
-                        </div>
-                        <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Built For</p>
-                            <p className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">Growth-focused brands</p>
-                            <p className="mt-2 text-sm leading-6 text-slate-600">Packages cover launch sites, business websites, ecommerce, and monthly marketing.</p>
-                        </div>
-                        <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">Need Custom Scope?</p>
-                            <p className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">Let us tailor it</p>
-                            <p className="mt-2 text-sm leading-6 text-slate-600">If your requirements are beyond a standard package, we can shape a custom proposal.</p>
-                        </div>
-                    </section> */}
+            <div className="relative overflow-hidden px-0 py-4  sm:px-2 lg:px-4 lg:py-10">
+                <div className="max-w-full">                    
 
                     <div className="space-y-10">
                         <PricingSection

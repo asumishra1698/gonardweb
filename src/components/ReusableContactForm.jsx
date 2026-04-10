@@ -185,6 +185,7 @@ function ReusableContactForm({
                         <div className="inline-flex rounded-full bg-[#e7f0ff] px-4 py-2  text-xs font-extrabold uppercase tracking-[0.24em] text-[#2550c3]">
                             {triggerEyebrow}
                         </div>
+                        
                         <h2 className="mt-5  text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
                             {triggerTitle}
                         </h2>
@@ -239,9 +240,7 @@ function ReusableContactForm({
                         </button>
 
                         <div className="max-w-2xl">
-                            <div className="inline-flex rounded-full bg-[#e7f0ff] px-4 py-2  text-xs font-extrabold uppercase tracking-[0.24em] text-[#2550c3]">
-                                Reusable popup form
-                            </div>
+                           
                             <h2 id="consultation-popup-title" className="mt-5  text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
                                 {title}
                             </h2>

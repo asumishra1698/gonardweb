@@ -29,7 +29,6 @@ const PortfolioPage = lazy(() => import('./pages/work/PortfolioPage.jsx'))
 const CaseStudiesPage = lazy(() => import('./pages/work/CaseStudiesPage.jsx'))
 const ClientPage = lazy(() => import('./pages/work/ClientPage.jsx'))
 const ClientTestimonialsPage = lazy(() => import('./pages/work/ClientTestimonialsPage.jsx'))
-const StackPage = lazy(() => import('./pages/StackPage.jsx'))
 const PricingPage = lazy(() => import('./pages/PricingPage.jsx'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'))
 
@@ -243,8 +242,7 @@ function App() {
               bannerDescription="Use this banner to support signups with a strong promise, cleaner context, and a direct next action."
             />
           }
-        />
-          <Route path="stack" element={<StackPage />} />
+        />         
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="home" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFoundPage />} />

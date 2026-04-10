@@ -111,7 +111,7 @@ function BlogPostPage() {
                 <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem]">
                     <div className="space-y-8">
                         {post.sections?.map((section) => (
-                            <section key={section.heading} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
+                            <section key={section.heading} className="rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
                                 <h2 className="text-2xl font-semibold tracking-tight text-slate-950">{section.heading}</h2>
                                 <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
                                     {section.paragraphs.map((paragraph) => (
@@ -134,7 +134,7 @@ function BlogPostPage() {
                         ))}
 
                         {!post.sections ? (
-                            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
+                            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
                                 <div className="h-6 w-52 rounded-full bg-slate-200" />
                                 <div className="mt-5 space-y-3">
                                     <div className="h-4 rounded-full bg-slate-100" />
@@ -145,7 +145,7 @@ function BlogPostPage() {
                         ) : null}
 
                         {post.faq?.length ? (
-                            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
+                            <section className="rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
                                 <h2 className="text-2xl font-semibold tracking-tight text-slate-950">Frequently Asked Questions</h2>
                                 <div className="mt-6 space-y-5">
                                     {post.faq.map((item) => (
@@ -160,7 +160,7 @@ function BlogPostPage() {
 
                     </div>
 
-                    <aside className="h-fit rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)]">
+                    <aside className="h-fit rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)]">
                         <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">{focusTitle}</p>
                         <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
                             {focusPoints.map((point) => (
@@ -223,7 +223,7 @@ function BlogPostPage() {
                     </aside>
                 </div>
 
-                <section className="mt-10 rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
+                <section className="mt-10 rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
                     <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                         <div>
                             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">More From The Blog</p>

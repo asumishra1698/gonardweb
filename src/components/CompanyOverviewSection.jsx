@@ -79,7 +79,7 @@ function CompanyOverviewSection({
             {badge}
           </div>
 
-          <h2 className="mt-6 max-w-4xl  text-[2.6rem] font-black leading-[1.02] tracking-tight text-slate-950 sm:text-2xl xl:text-[2.5rem]">
+          <h2 className="mt-6 max-w-4xl  text-[1.6rem] font-black leading-[1.02] tracking-tight text-slate-950 sm:text-2xl xl:text-[2.5rem]">
             {titleBefore}{' '}
             <span className="text-[#2f59df]">{highlightedText}</span>{' '}
             {titleAfter}

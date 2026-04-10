@@ -95,12 +95,12 @@ function WebsiteDesignFaqSection() {
   const [openItem, setOpenItem] = useState(0)
 
   return (
-    <section className="mb-5 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_22px_60px_rgba(15,23,42,0.06)] sm:p-8 lg:p-10">
+    <section className="mb-5 rounded-[2rem] border border-slate-200 bg-white p-4 shadow-[0_22px_60px_rgba(15,23,42,0.06)] sm:p-8 lg:p-10">
       <div className="max-w-5xl">
         <span className="inline-flex rounded-full border border-[#cfd9ff] bg-[#eef3ff] px-4 py-2  text-[0.68rem] font-extrabold uppercase tracking-[0.28em] text-[#2447A8]">
           Website Design FAQs
         </span>
-        <h2 className="mt-4  text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+        <h2 className="mt-4 text-2xl font-black tracking-tight text-slate-950 sm:text-4xl">
           Common questions about website designing and redesign projects.
         </h2>
         <p className="mt-4 max-w-2xl  text-base leading-8 text-slate-600 sm:text-lg">

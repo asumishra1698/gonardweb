@@ -121,7 +121,7 @@ function AboutPage() {
                         {processSteps.map((step, index) => (
                             <article
                                 key={step.title}
-                                className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.04)]"
+                                className="rounded-[1.6rem] border border-slate-200 bg-white p-4 shadow-[0_16px_40px_rgba(15,23,42,0.04)]"
                             >
                                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#2550c3]  text-sm font-black text-white">
                                     0{index + 1}

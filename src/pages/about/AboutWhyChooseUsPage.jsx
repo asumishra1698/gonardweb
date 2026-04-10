@@ -130,7 +130,7 @@ function AboutWhyChooseUsPage() {
           {differentiators.map((item) => (
             <article
               key={item.title}
-              className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)]"
+              className="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-[0_20px_60px_rgba(15,23,42,0.06)]"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,_#123a91,_#2563eb)] text-white shadow-[0_18px_40px_rgba(37,80,195,0.2)]">
                 {item.icon}

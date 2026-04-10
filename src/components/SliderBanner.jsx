@@ -74,7 +74,7 @@ function SliderBanner({
 
       <div
         className={[
-          'relative flex flex-col px-7 py-10 sm:px-10 lg:px-16 lg:py-16',
+          'relative flex flex-col px-2 py-10 sm:px-10 lg:px-16 lg:py-16',
           fullScreen ? 'min-h-[100svh]' : 'min-h-[430px] lg:min-h-[560px]',
         ].join(' ')}
       >
@@ -83,7 +83,7 @@ function SliderBanner({
             <p className="text-sm font-semibold uppercase tracking-[0.34em] text-white/70">
               {activeSlide.eyebrow}
             </p>
-            <h2 className="mt-5  text-4xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
               {activeSlide.title}
             </h2>
             <p className="mx-auto mt-6  text-lg text-white/90 lg:mx-0 lg:text-[1.5rem]">

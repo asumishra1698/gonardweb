@@ -173,7 +173,7 @@ function FaqAccordionSection({ section }) {
   const [openItem, setOpenItem] = useState(0)
 
   return (
-    <section className="rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8 lg:p-10">
+    <section className="rounded-[2rem] border border-slate-200 bg-white p-4 sm:p-8 lg:p-10">
       <div className="max-w-3xl">
         <h2 className=" text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
           {section.title}

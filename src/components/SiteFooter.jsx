@@ -75,6 +75,7 @@ const socialLinks = [
 function SiteFooter({ brand = 'GonardWeb', className = '' }) {
   const [showBackToTop, setShowBackToTop] = useState(false)
   const [showWhatsAppButton, setShowWhatsAppButton] = useState(false)
+  const [openFooterGroup, setOpenFooterGroup] = useState('')
 
   useEffect(() => {
     const updateBackToTopVisibility = () => {
@@ -103,23 +104,69 @@ function SiteFooter({ brand = 'GonardWeb', className = '' }) {
       ].join(' ')}
     >
       <div className="mx-auto max-w-[1800px] px-6 py-14 sm:px-8 lg:px-14 xl:px-16">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {footerGroups.map((group) => (
-            <section key={group.title}>
-              <h2 className=" text-[1.05rem] font-semibold text-slate-900">
-                {group.title}
-              </h2>
-              <ul className="mt-6 space-y-2  text-[1.05rem]  text-slate-600">
-                {group.links.map((link) => (
-                  <li key={link.to}>
-                    <Link className="transition-colors hover:text-[#2447A8]" to={link.to}>
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {footerGroups.map((group) => {
+            const isOpen = openFooterGroup === group.title
+            const contentId = `footer-group-${group.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+
+            return (
+              <section key={group.title} className="border-b border-slate-200 pb-4 md:border-b-0 md:pb-0">
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between gap-4 md:hidden"
+                  aria-expanded={isOpen}
+                  aria-controls={contentId}
+                  onClick={() => setOpenFooterGroup((open) => (open === group.title ? '' : group.title))}
+                >
+                  <span className="text-left text-[1.05rem] font-semibold text-slate-900">
+                    {group.title}
+                  </span>
+                  <svg
+                    viewBox="0 0 20 20"
+                    className={[
+                      'h-4 w-4 shrink-0 text-slate-500 transition-transform duration-200',
+                      isOpen ? 'rotate-180' : 'rotate-0',
+                    ].join(' ')}
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5.5 7.5 10 12l4.5-4.5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <h2 className="hidden text-[1.05rem] font-semibold text-slate-900 md:block">
+                  {group.title}
+                </h2>
+
+                <div
+                  id={contentId}
+                  className={[
+                    'grid overflow-hidden transition-[grid-template-rows,opacity,margin] duration-300 ease-out md:block md:overflow-visible',
+                    isOpen ? 'mt-4 grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0',
+                    'md:mt-6 md:opacity-100',
+                  ].join(' ')}
+                >
+                  <div className="overflow-hidden md:overflow-visible">
+                    <ul className="space-y-2 text-[1.05rem] text-slate-600">
+                      {group.links.map((link) => (
+                        <li key={link.to}>
+                          <Link className="transition-colors hover:text-[#2447A8]" to={link.to}>
+                            {link.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )
+          })}
 
           <section>
             <h2 className=" text-[1.05rem] font-semibold text-slate-900">
@@ -152,7 +199,7 @@ function SiteFooter({ brand = 'GonardWeb', className = '' }) {
               <h2 className=" text-2xl font-black tracking-tight text-slate-950">
                 {brand}
               </h2>
-              <p className="mt-3  text-[1.05rem] text-slate-600">
+              <p className="mt-3  text-[1rem] text-slate-600">
                 © {new Date().getFullYear()} {brand}. All rights reserved.
               </p>
               <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3  text-[1.05rem] text-slate-600">
@@ -168,7 +215,7 @@ function SiteFooter({ brand = 'GonardWeb', className = '' }) {
               </div>
             </div>
 
-            <div className="flex items-center justify-start gap-5 xl:justify-end mr-10">
+            <div className="mr-0 flex items-center justify-center gap-5 xl:mr-10 xl:justify-end">
               {socialLinks.map((item) => (
                 <a
                   key={item.label}
