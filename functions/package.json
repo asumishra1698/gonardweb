@@ -1,0 +1,13 @@
+{
+  "name": "gonardweb-firebase-functions",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-functions": "^6.0.1",
+    "nodemailer": "^8.0.4"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "gonard-126c0"
+  },
+  "targets": {
+    "gonard-126c0": {
+      "hosting": {
+        "gonardwebsite": [
+          "gonard-126c0"
+        ]
+      }
+    }
+  }
+}
