@@ -219,9 +219,9 @@ function ClientTestimonialsSection({
                     ref={sliderRef}
                     className="testimonials-slider mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 scroll-smooth sm:gap-5"
                 >
-                    {testimonials.map((testimonial) => (
+                    {testimonials.map((testimonial, index) => (
                         <article
-                            key={`${testimonial.companyName}-${testimonial.clientName}`}
+                            key={`${testimonial.companyName}-${testimonial.clientName}-${index}`}
                             className="flex min-w-[85%] snap-start flex-col rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.96))] p-6  sm:min-w-[calc(50%-10px)] lg:min-w-[calc(25%-15px)]"
                         >
                             <div className="flex items-start justify-between gap-4">

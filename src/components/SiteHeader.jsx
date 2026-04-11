@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const navigationItems = [
@@ -166,8 +166,35 @@ function SiteHeader({
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null)
+  const menuToggleButtonRef = useRef(null)
+  const mobileMenuRef = useRef(null)
+
+  function closeMobileMenu() {
+    const menuElement = mobileMenuRef.current
+    const focusedElement = document.activeElement
+
+    if (menuElement && focusedElement && menuElement.contains(focusedElement)) {
+      focusedElement.blur()
+      requestAnimationFrame(() => {
+        menuToggleButtonRef.current?.focus()
+      })
+    }
+
+    setOpenMobileSubmenu(null)
+    setIsMenuOpen(false)
+  }
 
   useEffect(() => {
+    const menuElement = mobileMenuRef.current
+
+    if (menuElement) {
+      if (isMenuOpen) {
+        menuElement.removeAttribute('inert')
+      } else {
+        menuElement.setAttribute('inert', '')
+      }
+    }
+
     if (!isMenuOpen) {
       return undefined
     }
@@ -210,10 +237,17 @@ function SiteHeader({
           </div>
 
           <button
+            ref={menuToggleButtonRef}
             type="button"
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen((open) => !open)}
+            onClick={() => {
+              if (isMenuOpen) {
+                closeMobileMenu()
+                return
+              }
+              setIsMenuOpen(true)
+            }}
             className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-900 shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition hover:border-[#2447A8] hover:text-[#2447A8] xl:hidden"
           >
             <MenuToggleIcon open={isMenuOpen} />
@@ -226,26 +260,29 @@ function SiteHeader({
           'fixed inset-0 z-40 bg-slate-950/35 backdrop-blur-sm transition-opacity duration-300 xl:hidden',
           isMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
         ].join(' ')}
-        onClick={() => setIsMenuOpen(false)}
+        onClick={closeMobileMenu}
         aria-hidden="true"
       />
 
       <aside
+        ref={mobileMenuRef}
         className={[
           'fixed right-0 top-0 z-50 flex h-screen w-[min(100vw,560px)] flex-col overflow-y-auto bg-[linear-gradient(180deg,_#ffffff_0%,_#f6f9ff_100%)] shadow-[0_24px_80px_rgba(15,23,42,0.22)] transition-transform duration-300 ease-out xl:hidden',
           isMenuOpen ? 'translate-x-0' : 'translate-x-full',
         ].join(' ')}
-        aria-hidden={!isMenuOpen}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
       >
         <div className="border-b border-slate-200 px-5 py-5">
           <div className="flex items-center justify-between gap-4">
-            <Link to="/" className="shrink-0" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" className="shrink-0" onClick={closeMobileMenu}>
               <BrandMark />
             </Link>
             <button
               type="button"
               aria-label="Close navigation menu"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMobileMenu}
               className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 transition hover:border-[#2447A8] hover:text-[#2447A8]"
             >
               <MenuToggleIcon open />
@@ -268,7 +305,7 @@ function SiteHeader({
                   <div className="flex items-center gap-2 p-2">
                     <Link
                       to={item.to}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={closeMobileMenu}
                       className="flex-1 rounded-xl px-3 py-3 text-base font-semibold text-slate-800 transition-colors hover:text-[#2447A8]"
                     >
                       {item.label}
@@ -305,8 +342,7 @@ function SiteHeader({
                             key={child.to}
                             to={child.to}
                             onClick={() => {
-                              setOpenMobileSubmenu(null)
-                              setIsMenuOpen(false)
+                              closeMobileMenu()
                             }}
                             className={[
                               'block rounded-xl px-3 py-3 text-sm font-semibold transition-colors',
@@ -328,7 +364,7 @@ function SiteHeader({
                   to={item.to}
                   end={item.to === '/'}
                   className={mobileNavLinkClass}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={closeMobileMenu}
                   style={{ transitionDelay: isMenuOpen ? `${index * 45}ms` : '0ms' }}
                 >
                   <span className="inline-flex items-center gap-2">
