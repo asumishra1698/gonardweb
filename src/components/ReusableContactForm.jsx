@@ -18,7 +18,7 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 function ReusableContactForm({
     title = 'Book a free consultation',
-    description = 'Share a few details and we will reach out with the right next step for your website, eCommerce, or digital project.',
+    // description = 'Share a few details and we will reach out with the right next step for your website, eCommerce, or digital project.',
     submitLabel = 'Send Inquiry',
     endpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || '/api/contact',
     triggerLabel = 'Open Consultation Form',
@@ -244,9 +244,9 @@ function ReusableContactForm({
                             <h2 id="consultation-popup-title" className="mt-5  text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
                                 {title}
                             </h2>
-                            <p className="mt-4  text-base leading-8 text-slate-600 sm:text-lg">
+                            {/* <p className="mt-4  text-base leading-8 text-slate-600 sm:text-lg">
                                 {description}
-                            </p>
+                            </p> */}
                         </div>
 
                         <form className="mt-8 grid gap-5 sm:grid-cols-2" onSubmit={handleSubmit}>
@@ -354,7 +354,7 @@ function ReusableContactForm({
                                         </p>
                                     ) : (
                                         <p className=" text-sm text-slate-500">
-                                            Your details are sent securely through a backend Nodemailer handler.
+                                            We respect your privacy. No spam, no auto-messages, no pressure.
                                         </p>
                                     )}
                                 </div>
