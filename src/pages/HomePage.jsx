@@ -158,7 +158,7 @@ function HomePage() {
           titleBefore="More than"
           highlightedText="10+ years"
           titleAfter="we provide IT solutions & Software Innovation"
-          description="Since 2018, gonardweb has been a dedicated provider of customized solutions for various industries, with a strong emphasis on real estate. We stand out by offering both custom and platform-based solutions, ensuring your specific needs are met. Choose gonardweb for a unique and flexible approach to address your business requirements."
+          description="Since 2015, gonardweb has been a dedicated provider of customized solutions for various industries, with a strong emphasis on real estate. We stand out by offering both custom and platform-based solutions, ensuring your specific needs are met. Choose gonardweb for a unique and flexible approach to address your business requirements."
           accordionItems={companyAccordionItems}
           featureCards={companyFeatureCards}
         />
