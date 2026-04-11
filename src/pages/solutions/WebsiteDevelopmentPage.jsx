@@ -206,6 +206,21 @@ function WebsiteDevelopmentPage() {
               <p className="mt-3 max-w-2xl  text-sm leading-7 text-white/88 sm:text-base sm:leading-8 lg:text-lg">
                 {item.description}
               </p>
+              <div className="mt-4 flex items-center justify-end">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.18em] text-white/90 sm:text-base">
+                  Know more
+                  <svg viewBox="0 0 80 20" className="h-4 w-14" aria-hidden="true">
+                    <path
+                      d="M2 10h70M64 4l8 6-8 6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </button>
         ))}
