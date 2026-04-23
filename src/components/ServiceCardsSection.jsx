@@ -47,7 +47,7 @@ function ServiceCardsSection({
       <div className="w-full max-w-none">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className=" text-3xl font-black tracking-tight text-[#2349b6] sm:text-4xl">
-            {title}
+            {title} 
           </h2>
           <p className="mt-6  text-lg text-slate-700 sm:text-[1.15rem]">
             {description}
