@@ -50,7 +50,7 @@ function BlogPostPage() {
                     <Link to="/blog" className="transition hover:text-[#2447A8]">Blog</Link>
                     <span>/</span>
                     <span className="text-slate-700">{post.title}</span>
-                </nav>               
+                </nav>
 
                 <header className="mt-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
                     <div className={`bg-gradient-to-br ${post.accent} px-6 py-10 text-white sm:px-8 lg:px-10`}>
@@ -168,7 +168,7 @@ function BlogPostPage() {
                             ))}
                         </ul>
 
-                          <button
+                        <button
                             type="button"
                             onClick={openConsultationPopup}
                             className="mt-6 inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
@@ -219,7 +219,7 @@ function BlogPostPage() {
                                     ))}
                                 </div>
                             </div>
-                        ) : null}                      
+                        ) : null}
                     </aside>
                 </div>
 
