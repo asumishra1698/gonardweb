@@ -343,9 +343,9 @@ const routeMetadata = {
     name: 'Terms and Conditions',
   },
   '/privacy-policy': {
-    title: 'Privacy Policy | Elbroz Media Pvt Ltd',
+    title: 'Privacy Policy | Gonardweb',
     description:
-      'Review how Elbroz Media Pvt Ltd collects, uses, stores, and protects personal data across www.elbroz.com and related services.',
+      'Review how Gonardweb collects, uses, stores, and protects personal data across www.gonardweb.com and related services.',
     type: 'WebPage',
     name: 'Privacy Policy',
   },

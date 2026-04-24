@@ -4,6 +4,7 @@ import websiteDesignAndMarketingForFashionBrandsWeRankAndConvert from './website
 import gonardwebRanked1ForDynamicWebsitesInGhaziabad from './gonardweb-ranked-1-for-dynamic-websites-in-ghaziabad.jsx';
 import customWebsiteSolutionsFromGhaziabadTopAgencies from './custom-website-solutions-from-ghaziabad-top-agencies.jsx';
 import ecommerceWebsiteDesigningAgencyInGhaziabad from './ecommerce-website-designing-agency-in-ghaziabad.jsx';
+import realEstateWebsiteDesignGhaziabad from './real-estate-website-design-ghaziabad.jsx';
 import buildABusinessWebsiteThatConverts from './build-a-business-website-that-converts.jsx';
 
 const blogPostEntries = [
@@ -14,6 +15,7 @@ const blogPostEntries = [
   customWebsiteSolutionsFromGhaziabadTopAgencies,
   ecommerceWebsiteDesigningAgencyInGhaziabad,
   buildABusinessWebsiteThatConverts,
+  realEstateWebsiteDesignGhaziabad,
 ]
 
 const blogPosts = blogPostEntries.map((post) => ({
@@ -34,6 +36,7 @@ const blogPostLoaders = {
   'ecommerce-website-designing-agency-in-ghaziabad': () => import('./ecommerce-website-designing-agency-in-ghaziabad.jsx'),
   'build-a-business-website-that-converts': () => import('./build-a-business-website-that-converts.jsx'),
   'website-development-process-in-ghaziabad-gonardweb': () => import('./website-development-process-in-ghaziabad-gonardweb.jsx'),
+  'real-estate-website-design-ghaziabad': () => import('./real-estate-website-design-ghaziabad.jsx'),
 }
 
 function getBlogPostBySlug(slug) {

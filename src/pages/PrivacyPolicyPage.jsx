@@ -131,7 +131,7 @@ function PrivacyPolicyPage() {
       description="Review how GonardWeb collects, uses, stores, and protects personal data across its website and related services."
       bannerTitle="Privacy practices explained with clearer structure and full policy detail."
       bannerDescription="This page outlines the company’s data collection, legal basis, international transfer safeguards, cookies, security standards, and user rights."
-      focusTitle="Effective Date: 01 Jan 2025"
+      focusTitle="Effective Date: 01 Jan 2026"
       focusDescription="Read this policy to understand how personal information is handled when using www.gonardweb.com and related services."
       primaryAction={{ label: 'Contact Us', to: '/contact-us' }}
     >
