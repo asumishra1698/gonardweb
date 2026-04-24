@@ -1,4 +1,5 @@
 import { getBlogPostBySlug } from '../blogs/blogindex.jsx'
+import { getNewsMetadata } from './newsMetadata.js'
 
 const SITE_NAME = 'GonardWeb'
 const SITE_URL = 'https://gonardweb.com'
@@ -609,6 +610,16 @@ function getBlogMetadata(pathname) {
 
 export function getMetadataForPath(pathname) {
   const normalizedPath = normalizePath(pathname)
+  // News detail page support
+  const newsMetadata = getNewsMetadata(normalizedPath)
+  if (newsMetadata) {
+    return {
+      ...newsMetadata,
+      image: newsMetadata.image || DEFAULT_IMAGE,
+      keywords: 'GonardWeb, news, updates, website design, digital marketing, Ghaziabad',
+      robots: 'index, follow',
+    }
+  }
   const blogMetadata = getBlogMetadata(normalizedPath)
   const metadata = blogMetadata || routeMetadata[normalizedPath] || routeMetadata['*']
   const canonicalUrl = toCanonicalUrl(normalizedPath)

@@ -1,11 +1,15 @@
-import { Suspense, lazy, useEffect, useRef, useState } from 'react'
-import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
-import { ConsultationPopupProvider } from './components/ConsultationPopupProvider.jsx'
-import PageBannerLayout from './components/PageBannerLayout.jsx'
-import PageSeo from './components/PageSeo.jsx'
-import SiteFooter from './components/SiteFooter.jsx'
-import SiteHeader from './components/SiteHeader.jsx'
-import SiteLoader from './components/SiteLoader.jsx'
+
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
+import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom';
+import { ConsultationPopupProvider } from './components/ConsultationPopupProvider.jsx';
+import PageBannerLayout from './components/PageBannerLayout.jsx';
+import PageSeo from './components/PageSeo.jsx';
+import SiteFooter from './components/SiteFooter.jsx';
+import SiteHeader from './components/SiteHeader.jsx';
+import SiteLoader from './components/SiteLoader.jsx';
+
+const LatestNewsList = lazy(() => import('./LatestNews/LatestNewsList.jsx'));
+const LatestNewsDetail = lazy(() => import('./LatestNews/LatestNewsDetail.jsx'));
 
 const HomePage = lazy(() => import('./pages/HomePage.jsx'))
 const AboutPage = lazy(() => import('./pages/about/AboutPage.jsx'))
@@ -135,18 +139,8 @@ function App() {
             />
           }
         />
-        <Route
-          path="latest-news"
-          element={
-            <PageBannerLayout
-              eyebrow="Latest news"
-              title="Centralize media mentions, coverage, and brand materials."
-              description="Use this route for press resources, media kits, and news coverage."
-              bannerTitle="Create a clearer press surface for media, coverage, and brand assets."
-              bannerDescription="Use the banner to frame the page as a resource for journalists, partners, and external references."
-            />
-          }
-        />
+        <Route path="latest-news" element={<LatestNewsList />} />
+        <Route path="latest-news/:slug" element={<LatestNewsDetail />} />
         <Route
           path="partnerships"
           element={
