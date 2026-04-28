@@ -12,7 +12,7 @@ function PortfolioPage() {
       ],
       description:
         'Ashico is a dynamic womenswear label offering thoughtfully designed, high-quality clothing. Focused on creativity and modern aesthetics, it delivers versatile pieces for diverse styles. With strong sustainability values, premium fabrics, and timeless designs, Ashico enhances everyday fashion while promoting conscious, confident, and effortless dressing for today’s modern women.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/Ashico.png',
       link: 'https://ashico.in/',
     },
     {
@@ -23,7 +23,7 @@ function PortfolioPage() {
       ],
       description:
         'Aasthakaushik is a homegrown womenswear label from New Delhi, established in 2022. Known for its quirky designs and creative use of colors and patterns, it offers a unique alternative to high-street fashion. Focused on quality and sustainability, the brand creates handmade, versatile pieces using premium fabrics and eco-friendly practices.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/aashthakaushik.png',
       link: 'https://aasthakaushik.com/',
     },
     {
@@ -34,7 +34,7 @@ function PortfolioPage() {
       ],
       description:
         'Bohemians is a kidswear brand founded by Sheina Thapar, inspired by her decade-long fashion experience and motherhood. Focused on comfort and quality, it offers soft, premium fabrics with thoughtful designs and positive elements, ensuring stylish, safe, and feel-good clothing for children.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/Bohemians.png',
       link: 'https://bohemiansinc.in/',
     },
     {
@@ -45,7 +45,7 @@ function PortfolioPage() {
       ],
       description:
         'Blue Smart India is a dedicated platform that delivers high-quality solutions and services. Focused on innovation and user experience, it offers tailored resources to meet diverse needs. With a modern approach and reliable features, it is designed to support both individual and professional growth.',
-      image: '/Portfolio/bluesmart.png',
+      image: '/Portfolio/bluesmartindia.png',
       link: 'https://bluesmartindia.com/',
     },
     {
@@ -56,7 +56,7 @@ function PortfolioPage() {
       ],
       description:
         'Bynd Finserve is a dedicated platform that delivers high-quality solutions and services. Focused on innovation and user experience, it offers tailored resources to meet diverse needs. With a modern approach and reliable features, it is designed to support both individual and professional growth.',
-      image: '/Portfolio/portfolio_image_small-1752212422647-132777165.png',
+      image: '/Portfolio/bynd.png',
       link: 'https://byndfinserve.com/',
     },
     {
@@ -67,7 +67,7 @@ function PortfolioPage() {
       ],
       description:
         'Classicuir offers a versatile range of premium leather essentials, including tote, hobo, satchel, sling, handbags, wallets, backpacks, and more—crafted with elegance, durability, and functionality to complement every style and everyday need effortlessly.',
-      image: '/Portfolio/portfolio_image_small-1752212422647-132777165.png',
+      image: '/Portfolio/classicuir.png',
       link: 'https://classicuir.com/',
     },
     {
@@ -78,7 +78,7 @@ function PortfolioPage() {
       ],
       description:
         'Carlton Sports, established in 1946 in England, delivers premium badminton equipment backed by 75 years of innovation. Known for quality and authenticity, we offer reliable products, secure shopping, and trusted performance for players worldwide.',
-      image: '/Portfolio/portfolio_image_small-1752212422647-132777165.png',
+      image: '/Portfolio/carlton.png',
       link: 'https://carltonsports.in/',
     },
     {
@@ -89,7 +89,7 @@ function PortfolioPage() {
       ],
       description:
         'Eesha Lakhwani is a dedicated platform that delivers high-quality solutions and services. Focused on innovation and user experience, it offers tailored resources to meet diverse needs. With a modern approach and reliable features, it is designed to support both individual and professional growth.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/eesha.png',
       link: 'https://eeshalkhwani.com/',
     },
     {
@@ -100,7 +100,7 @@ function PortfolioPage() {
       ],
       description:
         'Fabiano Appliances, founded in 2002, creates high-quality kitchen solutions including chimneys, gas stoves, and more. Driven by innovation and affordability, we deliver reliable, hygienic, and eco-friendly appliances for modern homes across India.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/fabiano.png',
       link: 'https://www.fabianoappliances.com/',
     },
     {
@@ -111,7 +111,7 @@ function PortfolioPage() {
       ],
       description:
         'Founded in 1988 in Ghaziabad, Gentech Traders & Engineering Works supplies generator sets, rentals, and services. Known for quality, reliability, and expert support, we deliver efficient power solutions with trusted brands and timely execution.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/gentech.png',
       link: 'https://www.gentechtraders.in/',
     },
     {
@@ -122,7 +122,7 @@ function PortfolioPage() {
       ],
       description:
         'Host Culture is a dedicated platform that delivers high-quality solutions and services. Focused on innovation and user experience, it offers tailored resources to meet diverse needs. With a modern approach and reliable features, it is designed to support both individual and professional growth.',
-      image: '/Portfolio/portfolio_image_small-1752215543780-353350908.png',
+      image: '/Portfolio/hostculture.png',
       link: 'https://hostculturestudio.com/',
     },
     {
@@ -133,7 +133,7 @@ function PortfolioPage() {
       ],
       description:
         'At iiner Bliiss, we believe true wellness begins within. We offer yoga, meditation, sound healing, and holistic therapies to nurture mind, body, and spirit, creating a peaceful space for balance, self-connection, and conscious living.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/iinerbliis.png',
       link: 'https://iinerbliis.com/',
     },
     {
@@ -144,7 +144,7 @@ function PortfolioPage() {
       ],
       description:
         'Label Mae redefines heritage craftsmanship in luxury fashion, blending traditional Indian techniques with modern design. With sustainable practices, premium fabrics, and limited collections, we create timeless, elegant apparel for contemporary women.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/labelmae.png',
       link: 'https://labelmae.com/',
     },
     {
@@ -155,7 +155,7 @@ function PortfolioPage() {
       ],
       description:
         'Crafted with Indian hands and passion, our garments reflect exceptional design and detail. From fabric sourcing to embroidery, every step is locally driven. With a skilled team, we create unique, high-quality pieces with precision and pride.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/loudless.png',
       link: 'https://loudless.in/',
     },
     {
@@ -166,7 +166,7 @@ function PortfolioPage() {
       ],
       description:
         'Mayrake is a fashion brand blending ethnic and contemporary styles, inspired by Indian heritage and global trends. It offers quality, affordable apparel with handloom craftsmanship and modern designs, celebrating tradition while meeting today’s fashion needs.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/mayrake.png',
       link: 'https://mayrake.com/',
     },
     {
@@ -177,7 +177,7 @@ function PortfolioPage() {
       ],
       description:
         'MSKP Infratech Private Limited, established in 2022 in Uttar Pradesh, is a construction company committed to delivering reliable infrastructure solutions across India. With a strong foundation, it focuses on quality, efficiency, and sustainable development projects.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/mskp.png',
       link: 'https://mskpinfratech.com/',
     },
     {
@@ -199,7 +199,7 @@ function PortfolioPage() {
       ],
       description:
         'Shoptango is a vibrant womenswear brand from New Delhi, established in 2021. Known for its quirky and creative designs, it offers a fresh alternative to high-street fashion. With bold colors, unique prints, and premium fabrics, Shoptango creates stylish, functional pieces that blend comfort, individuality, and modern everyday wear.',
-      image: '/Portfolio/portfolio_image_small-1752212445948-234808768.png',
+      image: '/Portfolio/shoptango.png',
       link: 'https://www.shoptango.in/',
     },
 
