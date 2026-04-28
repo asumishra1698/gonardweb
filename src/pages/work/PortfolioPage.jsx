@@ -239,13 +239,21 @@ function PortfolioPage() {
               </div>
               {/* Right: Device Image */}
               <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-6 md:p-10">
-                <img
-                  src={project.image}
-                  alt={project.title + ' screenshot'}
-                  className="w-full max-w-[720px] md:max-w-[720px] rounded-xl"
-                  style={{ objectFit: 'contain' }}
-                  loading="lazy"
-                />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Visit ${project.title}`}
+                  className="block w-full"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title + ' screenshot'}
+                    className="w-full max-w-[720px] md:max-w-[720px] rounded-xl hover:opacity-90 transition-opacity duration-200"
+                    style={{ objectFit: 'contain' }}
+                    loading="lazy"
+                  />
+                </a>
               </div>
               {/* External Link Icon */}
               <a
