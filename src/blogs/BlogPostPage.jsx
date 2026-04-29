@@ -114,7 +114,7 @@ function BlogPostPage() {
                             <section key={section.heading} className="rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)] sm:p-8">
                                 <h2 className="text-2xl font-semibold tracking-tight text-slate-950">{section.heading}</h2>
                                 <div className="mt-4 space-y-4 text-base leading-8 text-slate-700">
-                                    {section.paragraphs.map((paragraph) => (
+                                    {section.paragraphs?.map((paragraph) => (
                                         <p key={paragraph}>{paragraph}</p>
                                     ))}
                                 </div>
@@ -129,6 +129,41 @@ function BlogPostPage() {
                                             </li>
                                         ))}
                                     </ul>
+                                ) : null}
+
+                                {section.table ? (
+                                    <div className="overflow-x-auto w-full max-w-full mt-6 block scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100" style={{ WebkitOverflowScrolling: 'touch' }}>
+                                        <table className="min-w-full max-w-full border border-slate-200 rounded-xl text-[10px] sm:text-base text-slate-700 whitespace-normal block">
+                                            <thead className="bg-slate-50">
+                                                <tr>
+                                                    {section.table.headers.map((header) => (
+                                                        <th key={header} className="px-2 py-2 sm:px-4 font-semibold border-b border-slate-200 text-slate-900 text-left break-words text-[10px] sm:text-base">{header}</th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {section.table.rows.map((row, i) => (
+                                                    <tr key={i} className="even:bg-slate-50">
+                                                        {row.map((cell, j) => (
+                                                            <td key={j} className="px-2 py-2 sm:px-4 border-b border-slate-100 break-words text-[10px] sm:text-base">{cell}</td>
+                                                        ))}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                ) : null}
+
+                                {section.testimonials?.length ? (
+                                    <div className="mt-8 space-y-6">
+                                        <h3 className="text-xl font-semibold text-slate-950">What Clients Say</h3>
+                                        {section.testimonials.map((testimonial, idx) => (
+                                            <div key={idx} className="rounded-xl border border-slate-100 bg-slate-50/70 p-5">
+                                                <p className="text-base italic text-slate-800">“{testimonial.quote}”</p>
+                                                <p className="mt-2 text-sm font-semibold text-slate-700">— {testimonial.author}</p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 ) : null}
                             </section>
                         ))}
