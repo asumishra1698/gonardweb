@@ -1,4 +1,5 @@
 import affordableDynamicWebsiteDevelopmentGhaziabad from './affordable-dynamic-website-development-ghaziabad.jsx';
+import mobileAppDeveloperGhaziabad from './mobile-app-developer-ghaziabad-up.jsx';
 import websiteDevelopmentProcessGhaziabad from './website-development-process-in-ghaziabad-gonardweb.jsx';
 import affordableAiWebDesignServicesInDelhiNcrGonardweb from './affordable-ai-web-design-services-in-delhi-ncr-gonardweb.jsx';
 import websiteDesignAndMarketingForFashionBrandsWeRankAndConvert from './website-design-and-marketing-for-fashion-brands-we-rank-and-convert.jsx';
@@ -10,6 +11,7 @@ import buildABusinessWebsiteThatConverts from './build-a-business-website-that-c
 
 const blogPostEntries = [
   affordableDynamicWebsiteDevelopmentGhaziabad,
+  mobileAppDeveloperGhaziabad,
   websiteDevelopmentProcessGhaziabad,
   affordableAiWebDesignServicesInDelhiNcrGonardweb,
   websiteDesignAndMarketingForFashionBrandsWeRankAndConvert,
@@ -40,6 +42,7 @@ const blogPostLoaders = {
   'website-development-process-in-ghaziabad-gonardweb': () => import('./website-development-process-in-ghaziabad-gonardweb.jsx'),
   'real-estate-website-design-ghaziabad': () => import('./real-estate-website-design-ghaziabad.jsx'),
   'affordable-dynamic-website-development-ghaziabad': () => import('./affordable-dynamic-website-development-ghaziabad.jsx'),
+  'mobile-app-developer-ghaziabad-up': () => import('./mobile-app-developer-ghaziabad-up.jsx'),
 }
 
 function getBlogPostBySlug(slug) {
