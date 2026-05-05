@@ -30,7 +30,7 @@ const mobileAppDeveloperGhaziabad = {
     'FAQs for small business mobile app development',
   ],
   heroSummary:
-    'A mobile app is no longer a luxury for small businesses in Ghaziabad — it is a growth engine. Gonardweb helps you reach more customers, build loyalty, and compete with the best using affordable, custom-built mobile apps.',
+    'Looking for a mobile app developer in Ghaziabad UP? Gonardweb builds affordable, high-quality mobile apps for small businesses. Learn about benefits, process, and how to get started.',
   sections: [
     {
       heading: 'Why Small Businesses in Ghaziabad UP Need a Mobile App Right Now',
