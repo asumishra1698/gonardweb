@@ -8,8 +8,10 @@ import customWebsiteSolutionsFromGhaziabadTopAgencies from './custom-website-sol
 import ecommerceWebsiteDesigningAgencyInGhaziabad from './ecommerce-website-designing-agency-in-ghaziabad.jsx';
 import realEstateWebsiteDesignGhaziabad from './real-estate-website-design-ghaziabad.jsx';
 import buildABusinessWebsiteThatConverts from './build-a-business-website-that-converts.jsx';
+import websiteDesigningCompanySahibabadGhaziabad from './website-designing-company-sahibabad-ghaziabad.jsx';
 
 const blogPostEntries = [
+  websiteDesigningCompanySahibabadGhaziabad,
   affordableDynamicWebsiteDevelopmentGhaziabad,
   mobileAppDeveloperGhaziabad,
   websiteDevelopmentProcessGhaziabad,
@@ -43,6 +45,7 @@ const blogPostLoaders = {
   'real-estate-website-design-ghaziabad': () => import('./real-estate-website-design-ghaziabad.jsx'),
   'affordable-dynamic-website-development-ghaziabad': () => import('./affordable-dynamic-website-development-ghaziabad.jsx'),
   'mobile-app-developer-ghaziabad-up': () => import('./mobile-app-developer-ghaziabad-up.jsx'),
+  'website-designing-company-sahibabad-ghaziabad': () => import('./website-designing-company-sahibabad-ghaziabad.jsx'),
 }
 
 function getBlogPostBySlug(slug) {
