@@ -35,6 +35,7 @@ const ClientPage = lazy(() => import('./pages/work/ClientPage.jsx'))
 const ClientTestimonialsPage = lazy(() => import('./pages/work/ClientTestimonialsPage.jsx'))
 const PricingPage = lazy(() => import('./pages/PricingPage.jsx'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'))
+const BestEcommerceWebsiteDesigningCompanyInSahibabadGhaziabad = lazy(() => import('./pages/best-ecommerce-website-designing-company-in-sahibabad-ghaziabad.jsx'))
 
 function RouteFallback() {
   return <div className="min-h-[40vh]" aria-hidden="true" />
@@ -109,7 +110,7 @@ function App() {
           <Route path="work/client" element={<ClientPage />} />
           <Route path="work/client-testimonials" element={<ClientTestimonialsPage />} />
           <Route path="pricing" element={<PricingPage />} />       
-       
+          <Route path="best-ecommerce-website-designing-company-in-sahibabad-ghaziabad" element={<BestEcommerceWebsiteDesigningCompanyInSahibabadGhaziabad />} />
         <Route
           path="faqs"
           element={<FaqPage />}

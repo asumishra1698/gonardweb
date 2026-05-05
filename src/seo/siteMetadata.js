@@ -81,6 +81,20 @@ const segmentLabels = {
 }
 
 const routeMetadata = {
+    '/best-ecommerce-website-designing-company-in-sahibabad-ghaziabad': {
+      title: 'Best Ecommerce Website Designing Company in Sahibabad | Gonardweb',
+      description: 'Gonardweb is the best ecommerce website designing company in Sahibabad, building feature-rich, secure, and high-converting online stores. Get custom ecommerce solutions designed to grow your sales today!',
+      type: 'Service',
+      name: 'Ecommerce Website Design Sahibabad',
+      serviceType: 'Ecommerce Website Design',
+      keywords: 'ecommerce website designing company Sahibabad, ecommerce website design Ghaziabad, Gonardweb ecommerce, Sahibabad web design, online store development Sahibabad',
+      relatedLinks: [
+        { label: 'Website Design Services', url: '/solutions/website-design' },
+        { label: 'Contact Us', url: '/contact-us' },
+        { label: 'Delhi NCR (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Delhi_NCR' },
+        { label: 'What is ecommerce? (Shopify)', url: 'https://www.shopify.com/learn/online/ecommerce-website' }
+      ],
+    },
   '/': {
     title: 'Top Website Designing Company in Ghaziabad | GonardWeb',
     description:
